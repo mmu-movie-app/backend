@@ -84,7 +84,7 @@ func Process(movieID int) MovieDB {
 }
 
 type MovieDB struct {
-	ID          uint      `gorm:"primaryKey" json:"-"`
+	ID          uint      `gorm:"primaryKey" json:"id"`
 	Title       string    `gorm:"not null" json:"title"`
 	Overview    string    `gorm:"type:text" json:"overview"`
 	Genres      []GenreDB `gorm:"many2many:movie_genres;" json:"genres"`

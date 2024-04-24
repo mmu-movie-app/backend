@@ -18,7 +18,7 @@ func Start() {
 	r.Use(cors.New(config))
 
 	r.GET("/process", route.Add)
-	r.GET("/view", route.Content)
+	r.GET("/view/:id", route.ViewFavorite)
 	r.POST("/search", route.Search)
 
 	r.Run()
